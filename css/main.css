@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'PoppinsMedium';
+  src: url('../fonts/Poppins-Medium.otf');
+}
+
+@font-face {
+  font-family: 'PoppinsRegular';
+  src: url('../fonts/Poppins-Regular.otf');
+}
+@font-face {
+  font-family: 'PoppinsRegular';
+  src: url('../fonts/Marcellus SC.otf');
+}
+
+
+:root {
+  --color-background: #FFFFFF!important;
+  --color-black: #212121;
+  --color-text: #BD8F51;
+  --color-text-out: #90908e;
+  --color-primary: #FBF2B6;
+  --color-primary-out: #BD8F51;
+  --color-secondary: #fff2cc;
+  --color-white: #ffffff;
+  --color-red: #e74c3c;
+  --color-green: #2ecc71;
+  --color-separate: #cccccc;
+  --color-input-out: #ececec;
+}
+html, body, main, footer, .container, .text-center, .d-flex .divisao{
+  background-color: var(--color-background);
+  font-family: 'Marcellus SC', 'PoppinsRegular', 'Rubik', sans-serif;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+h5, p, h2 {
+ color: var(--color-text) !important;
+ text-align: center;
+ font-family: 'PoppinsMedium', 'Rubik', sans-serif;
+ font-size: 18px;
+ line-height: 25px;
+ margin-bottom: 20px;
+
+}
+
+/* Inicio da personalização da logo e barra de navegação */
+.mx-auto {
+  margin-top: -50px;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-background);
+  width: 100%;
+  margin: -50px 10px 0px 0px;
+  
+}
+
+.nav-item, .nav-link {
+  font-family: 'PoppinsMedium', 'Rubik', sans-serif;
+  font-size: 18px;
+  color: var(--color-text) !important;
+  text-decoration: none !important; 
+  
+}
+
+.nav-link {
+ 
+  position: relative; /* Isso é necessário para posicionar corretamente o pseudo-elemento */
+  /* O restante do seu CSS para .nav-link continua igual */
+}
+.nav-item{
+  font-family: "Marcellus SC", serif !important;
+  font-weight: 400;
+  font-style: normal;
+  border: 20px !important;
+  margin: 0!important;
+  padding: 0 !important;
+}
+
+.nav-link:hover{
+  color: var(--color-primary)!important;
+  text-decoration: none!important;
+
+}
+
+.nav-link:before {
+  content: ''; /* Isso é necessário para gerar o pseudo-elemento */
+  position: absolute; /* Posiciona o pseudo-elemento em relação ao seu pai, que tem position: relative; */
+  width: 0; /* Começa com uma largura de 0 para a animação */
+  height: 2px; /* A altura da linha que você quer mostrar */
+  bottom: 0; /* Posiciona na parte inferior do elemento */
+  left: 50%; /* Começa no meio do elemento */
+  background-color: var(--color-primary); /* A cor da linha */
+  transition: all 0.3s ease-in-out; /* Transição suave para a animação */
+  transform: translateX(-50%); /* Centra o elemento */
+}
+
+.nav-link:hover:before {
+  width: 100%; /* A largura final quando o mouse está sobre o elemento */
+  left: 0; /* Começa da esquerda */
+  transform: translateX(0%); /* Sem translação necessária depois que a largura é de 100% */
+}
+
+/* FIM da Personalização do Cabeçalho */
+
+.carousel-item img {
+    height: 65vh; /* Ajuste a altura aqui */
+    object-fit: cover; /* Isso fará com que as imagens cubram o espaço disponível sem distorcê-las */
+}
+
+.profissionais-container {
+  background-image: url(../images/backceo.png);
+  background-image: linear-gradient(
+    to bottom, /* ou to right, dependendo de como você quer o gradiente */
+    #FBF2B6 50%, /* Cor e ponto onde começa a transição */
+    #FFFFFF 50% /* Cor e ponto onde termina a transição */
+  );
+  display: flex;
+  justify-content: space-around;
+  /*background-color: #9D9886;  Cor de fundo do seu site */
+  padding: 20px;
+}
+
+.profissional {
+  position: relative;
+  overflow: hidden;
+}
+
+.profissional img {
+ border-radius: 8px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, .8);
+ 
+ overflow: hidden;
+  display: flex;
+  max-width: 300px;
+}
+.descricao {
+  padding: 15px;
+  text-align: center;
+}
+
+.descricao h2 {
+  border: none;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.descricao p {
+  color: #666;
+  font-size: 1em;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 3rem; /* Ajuste o tamanho conforme necessário */
+  font-weight: bold; /* Fonte em negrito */
+}
+p {
+  text-align: justify; 
+  font-size: 1.5rem;
+  margin-top: 20px; /* Espaçamento acima do parágrafo */
+}
+/* Estilizações responsivas podem ser adicionadas, se necessário */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+.img-fluid {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .8);
+ overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}

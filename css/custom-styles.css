@@ -1,0 +1,366 @@
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../fonts/Poppins-Medium.otf');
+  }
+  
+  @font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../fonts/Poppins-Regular.otf');
+  }
+  
+  @font-face {
+    font-family: 'MarcellusSC';
+    src: url('../fonts/Marcellus-SC.otf');
+  }
+  
+  :root {
+    --color-background: #F8F9FA;
+    --color-text: #BD8F51;
+    --color-primary: #FBF2B6;
+  }
+  
+  html, body, main, footer, .container, .text-center, .d-flex .divisao {
+    background-color: var(--color-background)!important;
+    font-family: 'Marcellus SC', 'PoppinsRegular', 'Rubik', sans-serif;
+    color: var(--color-text);
+    font-size: 16px;
+  }
+  
+  h1, h2, h5, p {
+    color: var(--color-text);
+    text-align: center;
+    font-family: 'PoppinsMedium', 'Rubik', sans-serif;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h5 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    text-align: justify;
+    margin-top: 20px;
+  }
+  
+  .navbar-brand img {
+    margin-top: -50px;
+  }
+  
+  .navbar {
+    background-color: var(--color-background);
+  }
+  
+  .nav-link {
+    font-family: 'PoppinsMedium', 'Rubik', sans-serif;
+    font-size: 18px;
+    color: var(--color-text);
+    position: relative;
+  }
+  
+  .nav-link:hover {
+    color: var(--color-primary);
+  }
+  
+  .nav-link:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--color-primary);
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+  
+  .nav-link:hover:before {
+    width: 100%;
+    left: 0;
+    transform: translateX(0%);
+  }
+  
+  .carousel-item img {
+    height: 65vh;
+    object-fit: cover;
+  }
+  
+  .img-fluid {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    max-width: 100%;
+    height: auto;
+  }
+  /* Estilos personalizados aqui */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  /* Estilos para dispositivos móveis */
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+/* Estilos para o banner inicial */
+
+.background-image {
+  background-image: url('../images/rostoSite.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* Adjust the height as needed */
+}
+.text-container {
+  position: relative;
+  top: 80%;
+  transform: translateY(-80%);
+ 
+}
+h1 {
+  font-size: 1.5rem; /* Adjust the font size as needed for mobile devices */
+}
+.imgCard{
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-family: 'PoppinsMedium', 'Rubik', sans-serif;
+  font-size: 18px;
+  position: relative;
+  top: 10px;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+  border: solid 1px #FBF2B6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  margin: 1em;
+
+}
+
+@media (min-width: 768px) {
+  h1 {
+      font-size: 2.5rem; /* Adjust the font size for tablets and desktops */
+  }.background-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url('../images/roberia.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.text-container h1 {
+    margin-bottom: 20px;
+}
+
+.text-container a {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+}
+
+
+/* Estilos para o Carousel */
+.carousel-item {
+    height: 65vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para o Rodapé */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 20px 0;
+}
+
+footer a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color-primary-out);
+}
+
+footer .text-uppercase {
+    font-weight: bold;
+}
+
+/* Responsividade para o Carousel */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 40vh;
+    }
+}
+
+/* Responsividade para o Rodapé */
+@media (max-width: 768px) {
+    footer .row {
+        text-align: center;
+    }
+
+    footer .col-lg-6 {
+        margin-bottom: 20px;
+    }
+}
+/* Estilos para as seções */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--color-primary);
+}
+
+.service-item, .testimonial-item {
+    margin-bottom: 20px;
+}
+
+.service-item img, .testimonial-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.service-item h3, .testimonial-item h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: var(--color-primary);
+}
+
+.service-item p, .testimonial-item p {
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+/* Estilos para a seção de contato */
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info i {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-separate);
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--color-primary-out);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .service-item, .testimonial-item {
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+}
+.services-section {
+    background-color: #fff; /* Cor de fundo da seção */
+    padding: 2em 0; /* Espaçamento acima e abaixo da seção */
+  }
+  
+  .service-card {
+    background-color: #f7f7f7; /* Cor de fundo do cartão */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreamento para dar profundidade */
+    padding: 1em; /* Espaçamento interno */
+    margin: 1em; /* Espaçamento externo */
+    transition: transform 0.3s ease-in-out; /* Animação suave para efeito hover */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px); /* Efeito hover movendo o cartão para cima */
+  }
+  
+  .service-icon {
+    width: 60px; /* Tamanho do ícone */
+    height: auto; /* Altura automática para manter a proporção */
+    margin-bottom: 0.5em; /* Espaçamento abaixo do ícone */
+  }
+  
+  .service-title {
+    font-size: 1.25rem; /* Tamanho do título do serviço */
+    color: #bd8f51; /* Cor do título */
+    margin-bottom: 0.25em; /* Espaçamento abaixo do título */
+  }
+  
+  .service-description {
+    font-size: 0.95rem; /* Tamanho da descrição do serviço */
+    color: #666; /* Cor da descrição */
+    line-height: 1.5; /* Espaçamento da linha */
+  }
+  
+  @media (max-width: 768px) {
+    .service-card {
+      margin: 1em 0.5em; /* Menos margem em telas pequenas */
+    }
+    
+    .service-icon {
+      width: 50px; /* Ícones menores em dispositivos móveis */
+    }
+  
+    .service-title {
+      font-size: 1.1rem; /* Títulos menores em dispositivos móveis */
+    }
+  
+    .service-description {
+      font-size: 0.85rem; /* Descrições menores em dispositivos móveis */
+    }
+  }
+  

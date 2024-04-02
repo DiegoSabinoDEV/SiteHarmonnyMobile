@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../fonts/Poppins-Medium.otf');
+  }
+  
+  @font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../fonts/Poppins-Regular.otf');
+  }
+  
+  @font-face {
+    font-family: 'MarcellusSC';
+    src: url('../fonts/Marcellus-SC.otf');
+  }
+  
+  :root {
+    --color-background: #FFFFFF;
+    --color-text: #BD8F51;
+    --color-primary: #FBF2B6;
+  }
+  
+  html, body, main, footer, .container, .text-center, .d-flex .divisao {
+    background-color: var(--color-background);
+    font-family: 'Marcellus SC', 'PoppinsRegular', 'Rubik', sans-serif;
+    color: var(--color-text);
+    font-size: 16px;
+  }
+  
+  h1, h2, h5, p {
+    color: var(--color-text);
+    text-align: center;
+    font-family: 'PoppinsMedium', 'Rubik', sans-serif;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h5 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    text-align: justify;
+    margin-top: 20px;
+  }
+  
+  .navbar-brand img {
+    margin-top: -50px;
+  }
+  
+  .navbar {
+    background-color: var(--color-background);
+  }
+  
+  .nav-link {
+    font-family: 'PoppinsMedium', 'Rubik', sans-serif;
+    font-size: 18px;
+    color: var(--color-text);
+    position: relative;
+  }
+  
+  .nav-link:hover {
+    color: var(--color-primary);
+  }
+  
+  .nav-link:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--color-primary);
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+  
+  .nav-link:hover:before {
+    width: 100%;
+    left: 0;
+    transform: translateX(0%);
+  }
+  
+  .carousel-item img {
+    height: 65vh;
+    object-fit: cover;
+  }
+  
+  .img-fluid {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    max-width: 100%;
+    height: auto;
+  }
+  /* Estilos personalizados aqui */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  /* Estilos para dispositivos móveis */
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+
