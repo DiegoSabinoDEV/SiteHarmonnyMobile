@@ -50,3 +50,13 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', updateNavDots);
 });
 </script>*/
+
+    var offcanvasElement = document.getElementById('offcanvasNavbar');
+    offcanvasElement.addEventListener('shown.bs.offcanvas', function () {
+        document.body.style.overflow = 'visible';
+    });
+
+    offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
+        document.body.style.overflow = 'auto';
+    });
+
