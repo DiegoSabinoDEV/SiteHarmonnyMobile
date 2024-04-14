@@ -1,25 +1,232 @@
- .offcanvas-half-width {
+:root {
+  --color-background: #f8f9fa;
+  --color-text: #bd8f51;
+  --color-primary: #fbf2b6;
+  --color-primary-out: #f8f9fa;
+}
 
-    width: 50vw !important;
-    /*height: 400px; mudar tamanho da bar atual*/
-    
-   
+#home,
+.caixa {
+  background-color: var(--color-background) !important;
+  color: var(--color-text) !important;
+}
 
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #9bf0e1;
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-brand img {
+  width: 200px;
+  padding-left: 10px;
+  padding-bottom: 0;
+}
+
+.navbar-toggler {
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.nav-link {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: var(--color-text) !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: var(--color-primary) !important;
+  text-decoration: none !important;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:before {
+  content: ""; /* Isso é necessário para gerar o pseudo-elemento */
+  position: absolute; /* Posiciona o pseudo-elemento em relação ao seu pai, que tem position: relative; */
+  width: 0; /* Começa com uma largura de 0 para a animação */
+  height: 2px; /* A altura da linha que você quer mostrar */
+  bottom: 0; /* Posiciona na parte inferior do elemento */
+  left: 50%; /* Começa no meio do elemento */
+  background-color: var(--color-primary); /* A cor da linha */
+  transition: all 0.3s ease-in-out; /* Transição suave para a animação */
+  transform: translateX(-50%); /* Centra o elemento */
+}
+
+.nav-link:hover:before {
+  width: 100%; /* A largura final quando o mouse está sobre o elemento */
+  left: 0; /* Começa da esquerda */
+  transform: translateX(
+    0%
+  ); /* Sem translação necessária depois que a largura é de 100% */
+}
+
+.imgCanvas{
+  width: 100%;
+  height: 100%;
+  
 }
 
 
-/* Ajustar o tamanho da logo, se necessário */
+.menuMobile {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: var(--color-primary-out) !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.offcanvas-half-width {
+  width: 50vw !important;
+  /*height: 400px; mudar tamanho da bar atual*/
+  background-color: var(--color-primary);
+  border-radius: 0px 10px 10px 0px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;*/
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+
+}
+
+/* Ajustar o tamanho da logo, se necessário 
 .navbar-brand img {
-  /*height: auto;  Mantenha a proporção da imagem */
+  height: auto;  Mantenha a proporção da imagem 
     max-width: auto !important;
     max-width: 100px !important;
     
       
     }
+*/
 
-.servicos {
-  background-image: url(../images/backharmonny.jpg)!important;
+/* Estilos para telas menores - Smartphone */
+@media (max-width: 767.98px) {
+  .home-section {
+    padding-top: 100px;
+    padding-bottom: 250px;
+    background-image: url("../images/Banner1.png"); /* Caminho para sua imagem de fundo */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .home-section .col-md-12 {
+    background: rgba(
+      0,
+      0,
+      0,
+      0.4
+    ); /* Camada escura para melhorar a legibilidade do texto sobre a imagem de fundo */
+  }
+}
+
+.caixa {
+  background-image: url(../images/BacgroundOf.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 60px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.perfil {
+  background-image: url(../images/fundoCorInvertida.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--color-text) !important;
+  color: var(--color-primary-out) !important;
+  text-align: center !important;
+  font-family: "PoppinsMedium", "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  padding: 60px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.perfiltxt {
+  text-align: left;
+  color: var(--color-primary-out) !important;
+}
+
+/* Tipografia
+-----------------------------*/
+
+h5,
+h2,
+h3 {
+  color: var(--color-text) !important;
+  text-align: center !important;
+  font-family: "PoppinsMedium", "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: left !important;
+}
+
+.txtp {
+  text-align: center;
+  color: #ffffff; /* Ou qualquer cor que faça o texto destacar-se sobre a imagem de fundo */
+}
+
+.textQuem {
+  text-align: center !important;
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  color: var(--color-text);
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 1.5em !important;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 
 
+.whatsapp-icon, .top_bar_right, .action_button, body.button-custom, .action_button, .whatsapp-icon {
+  background: rgb(98, 214, 43) !important;
+ 
+}
+
+body.button-custom, .action_button, .whatsapp-icon, .whatsapp-icon {
+  color: #f8f9fa;
+ 
+  border-color: transparent;
+  box-shadow: unset;
+  text-decoration: none !important;
+  font-size:medium;
+}

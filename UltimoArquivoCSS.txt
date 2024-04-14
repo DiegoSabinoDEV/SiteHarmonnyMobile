@@ -1,0 +1,81 @@
+:root {
+  --color-background: #f8f9fa;
+  --color-text: #bd8f51;
+  --color-primary: #fbf2b6;
+  --color-primary-out: #f8f9fa;
+}
+
+#home,
+.caixa {
+  background-color: var(--color-background) !important;
+  color: var(--color-text) !important;
+}
+
+.navbar-brand img {
+  margin-top: -40px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 150px;
+  height: 150px;
+}
+
+.navbar-toggler {
+  margin-top: -50px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.offcanvas-half-width {
+  width: 50vw !important;
+  /*height: 400px; mudar tamanho da bar atual*/
+  background-color: var(--color-primary);
+  border-radius: 0px 10px 10px 0px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;*/
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+/* Ajustar o tamanho da logo, se necessário 
+.navbar-brand img {
+  height: auto;  Mantenha a proporção da imagem 
+    max-width: auto !important;
+    max-width: 100px !important;
+    
+      
+    }
+*/
+
+/* Estilos para telas menores - Smartphone */
+@media (max-width: 767.98px) {
+  .home-section {
+    padding-top: 100px;
+    padding-bottom: 250px;
+    background-image: url("../images/1.png"); /* Caminho para sua imagem de fundo */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .home-section .align-self-center h1,
+  .home-section .align-self-center p {
+    color: #ffffff; /* Ou qualquer cor que faça o texto destacar-se sobre a imagem de fundo */
+  }
+  .home-section .col-md-6 {
+    background: rgba(
+      0,
+      0,
+      0,
+      0.2
+    ); /* Camada escura para melhorar a legibilidade do texto sobre a imagem de fundo */
+  }
+}
+.container {
+  background-image: url(../images/h4.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
