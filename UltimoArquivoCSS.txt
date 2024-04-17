@@ -79,3 +79,258 @@
   background-size: cover;
 }
 
+
+------------------ Novo 16/04
+
+
+:root {
+  --color-background: #f8f9fa;
+  --color-text: #bd8f51;
+  --color-primary: #fbf2b6;
+  --color-primary-out: #f8f9fa;
+}
+
+#home {
+  background-color: var(--color-background) !important;
+  color: var(--color-text) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #9bf0e1;
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler {
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.nav-link {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: var(--color-text) !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: var(--color-primary) !important;
+  text-decoration: none !important;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:before {
+  content: ""; /* Isso é necessário para gerar o pseudo-elemento */
+  position: absolute; /* Posiciona o pseudo-elemento em relação ao seu pai, que tem position: relative; */
+  width: 0; /* Começa com uma largura de 0 para a animação */
+  height: 2px; /* A altura da linha que você quer mostrar */
+  bottom: 0; /* Posiciona na parte inferior do elemento */
+  left: 50%; /* Começa no meio do elemento */
+  background-color: var(--color-primary); /* A cor da linha */
+  transition: all 0.3s ease-in-out; /* Transição suave para a animação */
+  transform: translateX(-50%); /* Centra o elemento */
+}
+
+.nav-link:hover:before {
+  width: 100%; /* A largura final quando o mouse está sobre o elemento */
+  left: 0; /* Começa da esquerda */
+  transform: translateX(
+    0%
+  ); /* Sem translação necessária depois que a largura é de 100% */
+}
+
+/*--------------MENU CANVAS ------------------------------*/
+
+.offcanvas-half-width {
+  width: 50vw !important;
+  /*height: 400px; mudar tamanho da bar atual*/
+  background-color: var(--color-primary);
+  border-radius: 0px 10px 10px 0px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;*/
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.offcanvas-body {
+  text-align: center; /* Centralizando o conteúdo */
+}
+
+.navbar-nav {
+  width: 100%;
+  justify-content: center; /* Centraliza os itens do menu */
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones */
+  padding: 10px 0; /* Adiciona um pouco de espaço vertical */
+}
+
+.imgCanvas {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/*Media queries para versao Mobile*/
+
+/* Esconde os ícones de redes sociais na versão desktop */
+.social-media-icons {
+  display: none; /* Esconde por padrão */
+}
+
+/* Mostra os ícones apenas no menu off-canvas em telas pequenas */
+@media (max-width: 992px) {
+  .social-media-icons {
+    display: flex; /* Mostra os ícones apenas em telas menores */
+    justify-content: center; /* Centraliza os ícones */
+    padding: 10px 0; /* Adiciona um pouco de espaço vertical */
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-link {
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .nav-link:hover {
+    color: var(--color-primary-out) !important;
+    text-decoration: none !important;
+  }
+}
+
+/* Ajustar o tamanho da logo, se necessário 
+.navbar-brand img {
+  height: auto;  Mantenha a proporção da imagem 
+    max-width: auto !important;
+    max-width: 100px !important;
+    
+      
+    }
+*/
+
+.btSaibaQuem,
+.btPerfil,
+.btRodape {
+  text-decoration: none !important;
+  min-width: 100vw !important;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--color-primary) !important;
+  color: var(--color-text) !important;
+  transform: translateX(-50%) !important;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.btSaibaQuem:hover {
+  background-color: var(--color-primary-out) !important;
+  color: var(--color-text) !important;
+  transform: translateX(-50%) !important;
+}
+
+.btPerfil:hover {
+  background-color: var(--color-primary-out) !important;
+  color: var(--color-text) !important;
+  transform: translateX(-50%) !important;
+}
+
+.quemSomos,
+.servicos {
+  background-image: url(../images/BacgroundOf.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 60px 0;
+  color: var(--color-text) !important;
+  padding: 40px 0; /* Adiciona padding para melhor visualização */
+  text-align: center; /* Centraliza o texto para mais impacto */
+}
+
+.quemSomos,
+.servicos h2 {
+  font-size: 2.5rem; /* Tamanho maior para o título */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  font-weight: bold; /* Negrito para maior impacto */
+}
+
+.quemSomos,
+.servicos,
+h3 {
+  font-size: 1.8rem; /* Tamanho apropriado para subtítulos */
+  margin-bottom: 15px; /* Espaço abaixo do subtítulo */
+}
+
+.quemSomos .txtQuem,
+.txtServicos {
+  line-height: 1.8; /* Aumentando o espaçamento entre linhas */
+  letter-spacing: 0.5px; /* Espaçamento entre letras para melhor legibilidade */
+  margin-bottom: 20px; /* Espaço antes do botão */
+  font-size: 1.1rem; /* Tamanho de fonte adequado para leitura */
+  text-align: justify; /*
+}
+
+.btSaibaQuem,
+.btServicos {
+  background-color: var(--color-primary); /* Cor de fundo */
+  color: var(--color-text); /* Cor de texto */
+  padding: 10px 20px; /* Preenchimento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: bold; /* Fonte em negrito */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.btSaibaQuem,
+.btServicos:hover {
+  background-color: var(--color-primary-out); /* Cor ao passar o mouse */
+  text-decoration: none; /* Removendo o sublinhado */
+}
+
+.perfil {
+  background-image: url(../images/fundoCorInvertida.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--color-text) !important;
+  color: var(--color-primary-out) !important;
+  text-align: center !important;
+  font-family: "PoppinsMedium", "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  padding: 60px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Tipografia
+-----------------------------*/

@@ -5,8 +5,7 @@
   --color-primary-out: #f8f9fa;
 }
 
-#home,
-.caixa {
+#home {
   background-color: var(--color-background) !important;
   color: var(--color-text) !important;
 }
@@ -22,12 +21,6 @@
 .navbar-light .navbar-toggler {
   color: rgba(255, 255, 255, 0.5);
   border-color: rgba(255, 255, 255, 0.5);
-}
-
-.navbar-brand img {
-  width: 200px;
-  padding-left: 10px;
-  padding-bottom: 0;
 }
 
 .navbar-toggler {
@@ -76,22 +69,7 @@
   ); /* Sem translação necessária depois que a largura é de 100% */
 }
 
-.imgCanvas{
-  width: 100%;
-  height: 100%;
-  
-}
-
-.menuMobile {
-  text-align: center;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  color: var(--color-primary-out) !important;
-  font-size: 20px;
-  font-weight: bold;
-}
-
+/*--------------MENU CANVAS ------------------------------*/
 
 .offcanvas-half-width {
   width: 50vw !important;
@@ -101,7 +79,57 @@
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;*/
   transition: all 0.3s ease-in-out;
   transform: translateX(-50%);
+}
 
+.offcanvas-body {
+  text-align: center; /* Centralizando o conteúdo */
+}
+
+.navbar-nav {
+  width: 100%;
+  justify-content: center; /* Centraliza os itens do menu */
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones */
+  padding: 10px 0; /* Adiciona um pouco de espaço vertical */
+}
+
+.imgCanvas {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/*Media queries para versao Mobile*/
+
+/* Esconde os ícones de redes sociais na versão desktop */
+.social-media-icons {
+  display: none; /* Esconde por padrão */
+}
+
+/* Mostra os ícones apenas no menu off-canvas em telas pequenas */
+@media (max-width: 992px) {
+  .social-media-icons {
+    display: flex; /* Mostra os ícones apenas em telas menores */
+    justify-content: center; /* Centraliza os ícones */
+    padding: 10px 0; /* Adiciona um pouco de espaço vertical */
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-link {
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .nav-link:hover {
+    color: var(--color-primary-out) !important;
+    text-decoration: none !important;
+  }
 }
 
 /* Ajustar o tamanho da logo, se necessário 
@@ -114,34 +142,93 @@
     }
 */
 
-/* Estilos para telas menores - Smartphone */
-@media (max-width: 767.98px) {
-  .home-section {
-    padding-top: 100px;
-    padding-bottom: 250px;
-    background-image: url("../images/Banner1.png"); /* Caminho para sua imagem de fundo */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .home-section .col-md-12 {
-    background: rgba(
-      0,
-      0,
-      0,
-      0.4
-    ); /* Camada escura para melhorar a legibilidade do texto sobre a imagem de fundo */
-  }
+.btSaibaQuem,
+.btPerfil,
+.btRodape {
+  text-decoration: none !important;
+  min-width: 100vw !important;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--color-primary) !important;
+  color: var(--color-text) !important;
+  transform: translateX(-50%) !important;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
-.caixa {
+.btSaibaQuem:hover {
+  background-color: var(--color-primary-out) !important;
+  color: var(--color-text) !important;
+  transform: translateX(-50%) !important;
+}
+
+.btPerfil:hover {
+  background-color: var(--color-primary-out) !important;
+  color: var(--color-text) !important;
+  transform: translateX(-50%) !important;
+}
+
+.quemSomos,
+.servicos {
   background-image: url(../images/BacgroundOf.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 60px 0;
-  border-bottom: 1px solid #e5e5e5;
+  color: var(--color-text) !important;
+  padding: 40px 0; /* Adiciona padding para melhor visualização */
+  text-align: center; /* Centraliza o texto para mais impacto */
+}
+
+.quemSomos,
+.servicos h2 {
+  font-size: 2.5rem; /* Tamanho maior para o título */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  font-weight: bold; /* Negrito para maior impacto */
+}
+
+.quemSomos,
+.servicos,
+h3 {
+  font-size: 1.8rem; /* Tamanho apropriado para subtítulos */
+  margin-bottom: 15px; /* Espaço abaixo do subtítulo */
+}
+
+.quemSomos .txtQuem,
+.txtServicos {
+  line-height: 1.8; /* Aumentando o espaçamento entre linhas */
+  letter-spacing: 0.5px; /* Espaçamento entre letras para melhor legibilidade */
+  margin-bottom: 20px; /* Espaço antes do botão */
+  font-size: 1.1rem; /* Tamanho de fonte adequado para leitura */
+  text-align: justify; /*
+}
+
+.btSaibaQuem,
+.btServicos {
+  background-color: var(--color-primary); /* Cor de fundo */
+  color: var(--color-text); /* Cor de texto */
+  padding: 10px 20px; /* Preenchimento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: bold; /* Fonte em negrito */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.btSaibaQuem,
+.btServicos:hover {
+  background-color: var(--color-primary-out); /* Cor ao passar o mouse */
+  text-decoration: none; /* Removendo o sublinhado */
 }
 
 .perfil {
@@ -160,72 +247,53 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.perfiltxt {
-  text-align: left;
-  color: var(--color-primary-out) !important;
-}
-
 /* Tipografia
 -----------------------------*/
-
-h5,
-h2,
-h3 {
-  color: var(--color-text) !important;
-  text-align: center !important;
-  font-family: "PoppinsMedium", "Rubik", sans-serif;
-  font-size: 18px;
-  line-height: 25px;
-  margin-bottom: 20px;
+/* Estilo base para os cards de serviços */
+.card-servico {
+  background: #fff; /* Fundo branco para o card */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+  margin-bottom: 30px; /* Espaçamento abaixo do card */
+  padding: 20px; /* Espaçamento interno */
+  transition: transform 0.3s ease-in-out; /* Transição para efeito ao passar o mouse */
 }
 
-p {
-  text-align: left !important;
+.card-servico:hover {
+  transform: translateY(-5px); /* Eleva o card ao passar o mouse */
 }
 
-.txtp {
-  text-align: center;
-  color: #ffffff; /* Ou qualquer cor que faça o texto destacar-se sobre a imagem de fundo */
+/* Estilos específicos para o título do card */
+.card-servico h4 {
+  margin-top: 20px; /* Espaço acima do título */
+  margin-bottom: 10px; /* Espaço abaixo do título */
+  color: #333; /* Cor do texto para o título */
+  font-size: 1.5rem; /* Tamanho da fonte do título */
 }
 
-.textQuem {
-  text-align: center !important;
-  font-size: 3em;
-  font-weight: 700;
-  letter-spacing: 1px;
+/* Estilos para o texto dentro do card */
+.card-servico .txtServicos {
+  color: #666; /* Cor do texto para o parágrafo */
+  font-size: 1rem; /* Tamanho da fonte para o parágrafo */
+  line-height: 1.5; /* Espaçamento entre linhas */
 }
 
-h1 {
-  font-weight: 900;
-  letter-spacing: 1px;
-  margin-bottom: 50px;
-  color: var(--color-text);
+/* Estilo para o botão 'Veja mais' */
+.btServicos {
+  background-color: #bd8f51; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 10px 20px; /* Preenchimento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  font-weight: bold; /* Negrito no texto do botão */
+  margin-top: 30px; /* Espaço acima do botão */
+  display: inline-block; /* Faz o link se comportar como um botão */
 }
 
-h2 {
-  font-size: 3em;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-h3 {
-  font-size: 1.5em !important;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-
-
-.whatsapp-icon, .top_bar_right, .action_button, body.button-custom, .action_button, .whatsapp-icon {
-  background: rgb(98, 214, 43) !important;
- 
-}
-
-body.button-custom, .action_button, .whatsapp-icon, .whatsapp-icon {
-  color: #f8f9fa;
- 
-  border-color: transparent;
-  box-shadow: unset;
-  text-decoration: none !important;
-  font-size:medium;
+/* Estilo para o botão 'Veja mais' ao passar o mouse */
+.btServicos:hover {
+  background-color: #a6732c; /* Cor de fundo mais escura ao passar o mouse */
+  color: #fff; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: background-color 0.3s ease; /* Transição suave da cor */
 }
