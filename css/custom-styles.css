@@ -9,7 +9,7 @@
   background-color: var(--color-background) !important;
   color: var(--color-text) !important;
 }
-
+/* ------------ Barra Navegação ------------ */
 .navbar-light .navbar-nav .nav-link {
   color: white;
 }
@@ -32,6 +32,7 @@
 }
 
 .nav-link {
+  position: relative;
   margin-bottom: 10px;
   margin-right: 10px;
   margin-left: 10px;
@@ -43,10 +44,6 @@
 .nav-link:hover {
   color: var(--color-primary) !important;
   text-decoration: none !important;
-}
-
-.nav-link {
-  position: relative;
 }
 
 .nav-link:before {
@@ -103,35 +100,6 @@
   margin-left: 10px;
 }
 
-/*Media queries para versao Mobile*/
-
-/* Esconde os ícones de redes sociais na versão desktop */
-.social-media-icons {
-  display: none; /* Esconde por padrão */
-}
-
-/* Mostra os ícones apenas no menu off-canvas em telas pequenas */
-@media (max-width: 992px) {
-  .social-media-icons {
-    display: flex; /* Mostra os ícones apenas em telas menores */
-    justify-content: center; /* Centraliza os ícones */
-    padding: 10px 0; /* Adiciona um pouco de espaço vertical */
-    padding-right: 20px;
-  }
-}
-
-@media (max-width: 992px) {
-  .nav-link {
-    color: var(--color-text);
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .nav-link:hover {
-    color: var(--color-primary-out) !important;
-    text-decoration: none !important;
-  }
-}
-
 /* Ajustar o tamanho da logo, se necessário 
 .navbar-brand img {
   height: auto;  Mantenha a proporção da imagem 
@@ -141,6 +109,8 @@
       
     }
 */
+
+/*---------------- Personalizar Botões -------------------*/
 
 .btSaibaQuem,
 .btPerfil,
@@ -180,6 +150,24 @@
   transform: translateX(-50%) !important;
 }
 
+.btSaibaQuem,
+.btServicos {
+  background-color: var(--color-primary); /* Cor de fundo */
+  color: var(--color-text); /* Cor de texto */
+  padding: 10px 20px; /* Preenchimento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: bold; /* Fonte em negrito */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.btSaibaQuem,
+.btServicos:hover {
+  background-color: var(--color-primary-out); /* Cor ao passar o mouse */
+  text-decoration: none; /* Removendo o sublinhado */
+}
+
+/* --------------------- Estilização de Section ---------------------*/
+
 .quemSomos,
 .servicos {
   background-image: url(../images/BacgroundOf.png);
@@ -212,23 +200,7 @@ h3 {
   letter-spacing: 0.5px; /* Espaçamento entre letras para melhor legibilidade */
   margin-bottom: 20px; /* Espaço antes do botão */
   font-size: 1.1rem; /* Tamanho de fonte adequado para leitura */
-  text-align: justify; /*
-}
-
-.btSaibaQuem,
-.btServicos {
-  background-color: var(--color-primary); /* Cor de fundo */
-  color: var(--color-text); /* Cor de texto */
-  padding: 10px 20px; /* Preenchimento interno */
-  border-radius: 5px; /* Bordas arredondadas */
-  font-weight: bold; /* Fonte em negrito */
-  transition: background-color 0.3s ease; /* Transição suave de cor */
-}
-
-.btSaibaQuem,
-.btServicos:hover {
-  background-color: var(--color-primary-out); /* Cor ao passar o mouse */
-  text-decoration: none; /* Removendo o sublinhado */
+  text-align: justify;
 }
 
 .perfil {
@@ -247,9 +219,8 @@ h3 {
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* Tipografia
------------------------------*/
 /* Estilo base para os cards de serviços */
+
 .card-servico {
   background: #fff; /* Fundo branco para o card */
   border-radius: 10px; /* Bordas arredondadas */
@@ -296,4 +267,36 @@ h3 {
   color: #fff; /* Cor do texto */
   text-decoration: none; /* Remove o sublinhado */
   transition: background-color 0.3s ease; /* Transição suave da cor */
+}
+
+/*Media queries para versao Mobile*/
+
+/* Esconde os ícones de redes sociais na versão desktop */
+.social-media-icons {
+  display: none; /* Esconde por padrão */
+}
+
+/* Mostra os ícones apenas no menu off-canvas em telas pequenas */
+@media (max-width: 992px) {
+  .social-media-icons {
+    display: flex; /* Mostra os ícones apenas em telas menores */
+    justify-content: center; /* Centraliza os ícones */
+    padding: 10px 0; /* Adiciona um pouco de espaço vertical */
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-link {
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .nav-link:hover {
+    color: var(--color-primary-out) !important;
+    text-decoration: none !important;
+  }
+}
+.card-servico {
+  margin-bottom: 2rem; /* Adiciona 2rem de margem abaixo de cada card */
 }
