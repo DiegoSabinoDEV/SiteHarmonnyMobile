@@ -1,22 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Venha para a Homonny! Aqui você terá um atendimento personalizado em dermato funcional e micropigmentação">
-    <title>Clínica Harmonny</title>
+    <meta name="description" content="Venha para a Clínica Harmonny! Aqui você terá um atendimento personalizado em dermato funcional e micropigmentação">
+    <title>Clínica Harmonny - Dermato Funcional e Micropigmentação</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-    crossorigin="anonymous"
-  />
-     <link rel="stylesheet" href="css/custom-styles.css">
-     <title>Harmonny Clínia</title>
-    </head>
+    <link rel="preload" href="css/custom-styles.css" as="style">
+    <link rel="stylesheet" href="css/custom-styles.css">
+    <!-- Adição do favicon -->
+    <link rel="icon" href="images/harmonnyEscuro.jpg" type="image/x-icon">
+</head>
 <body>
 
                             <!--Cabeçalho-->
@@ -68,15 +63,9 @@
     <!-- /Fim do Cabeçalho-->
     
     <!-- Início seção home -->
-    <section id="home" class="home-section " >     
-      <!--Outra forma de apresentação sem o slide no celular
-      <h2 class="display-4 col-md-12 d-block d-md-none txtp">Na Harmonny Clinica, acreditamos que cuidar do corpo e da pele é essencial para o bem-estar geral. Com a vida agitada de hoje, é fundamental reservar um momento para cuidados pessoais. Nossos tratamentos estéticos são mais do que apenas procedimentos de beleza; são uma forma de você reconectar-se consigo mesmo, promovendo tanto a saúde física quanto a mental.<h2>
-        <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-icon md-12 d-block d-md-none">Agende
-          <i class="fab fa-whatsapp"></i>
-        </a>-->
-   
+    <section id="home" class="home-section " >
       <div class="container">
-       <div id="carouselExampleCaptions" class=" carousel slide col-md-12 ">
+       <div id="carouselExampleCaptions" class=" carousel slide col-md-12 desktop-only">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -120,11 +109,20 @@
       </div>
       </div>
       </section>
+      <!-- Vídeo para Mobile -->
+    <div class="video-container mobile-only">
+      <video autoplay loop muted playsinline>
+        <source src="images/videoClinica.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+      </video>
+    </div>
+  </div>
+</section>
 
 
 <!--Inicio section Quem Somos -->
 <section class="quemSomos">
-  <h2 class="display-4 pt-3 pb-3">Quem Somos</h2>
+  <h2 class="display-4 pt-5">Quem Somos</h2>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -132,8 +130,8 @@
       </div>
       <div class="col-md-6 d-flex"> 
         <div class="align-self-center">
-          <h3 class="pt-5">Conheça mais sobre nossa equipe e nossa história.</h3>
-          <p class="txtQuem pb-4">
+          <h3 class="display-6">Conheça mais sobre nossa equipe e nossa história.</h3>
+          <p class="txtQuem">
             "Na Clínica Harmonny, nos dedicamos a proporcionar um serviço
             excepcional no mundo da estética avançada. Especializamo-nos em
             harmonização corporal e facial, garantindo resultados que realçam a
@@ -167,9 +165,9 @@
       <div class="col-md-6 pt-5">
         <h4 class="perfiltxt pb-2"> Dra. Robéria Nayara </h4>
           <p cass="txtperfil">
-            • Graduada em Biomedicina •
+            • Graduada em Fisioterapia •
             <br>
-            • Especialista em Estética Avançada •
+            • Especialista em Dermatofuncional •
             <br>
             • Docente em pós-graduação •
             <br>
@@ -262,9 +260,11 @@
         © 2024 Clínica Harmonny - Todos os direitos reservados
         <a class="text-reset fw-bold" href="#!">Sabino</a>
         </div>
-
+        
 
     </div>
+
+
 </section>
 </footer>
 
@@ -277,22 +277,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Seu código JavaScript personalizado deve vir depois -->
-<script>
-  $(document).ready(function() {
-    // Seu código aqui
-  });
-  var offcanvasElement = document.getElementById('offcanvasNavbar');
-    offcanvasElement.addEventListener('shown.bs.offcanvas', function () {
-        document.body.style.overflow = 'visible';
-    });
-
-    offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
-        document.body.style.overflow = 'auto';
-    });
-
-  
-  
-</script>
+<script src="js/script.js"></script>
 
   
 

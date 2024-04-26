@@ -1,52 +1,31 @@
-window.addEventListener("scroll", function () {
-  const scrollPosition = window.scrollY;
-  const servicosElement = document.querySelector(".servicos");
-  const servicosPosition =
-    servicosElement.getBoundingClientRect().top + scrollPosition;
-  const servicosOffset = Math.max(0, window.innerHeight - servicosPosition);
-
-  document.querySelectorAll(".servicos .serv").forEach((element, index) => {
-    const speed = (index + 1) * 0.05;
-    element.style.transform = `translateY(${servicosOffset * speed}px)`;
-  });
+$(document).ready(function () {
+  // Seu código aqui
+});
+var offcanvasElement = document.getElementById("offcanvasNavbar");
+offcanvasElement.addEventListener("shown.bs.offcanvas", function () {
+  document.body.style.overflow = "visible";
 });
 
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-
-  // Autoplay
-  autoplay: {
-    delay: 2800,
-    disableOnInteraction: false,
-  },
-
-  // If you need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  // Remova navigation e scrollbar se não estiverem no seu HTML
+offcanvasElement.addEventListener("hidden.bs.offcanvas", function () {
+  document.body.style.overflow = "auto";
 });
-/*<script>
-// JavaScript para o menu de navegação dot
-document.addEventListener('DOMContentLoaded', function () {
-  const sections = document.querySelectorAll('section');
-  const navDots = document.querySelector('.nav-dot-menu');
 
-  // Função para atualizar a navegação dot
-  function updateNavDots() {
-    let index = sections.length;
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.querySelector(".video-container video");
 
-    while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+  if (video) {
+    video.play().catch((error) => {
+      console.error("Autoplay was prevented.");
+      // Cria e mostra um botão de play caso o autoplay não funcione
+      const playButton = document.createElement("button");
+      playButton.innerText = "Play";
+      playButton.classList.add("play-video-button"); // Adicione uma classe para estilização
+      playButton.addEventListener("click", () => {
+        video.play();
+      });
 
-    navDots.querySelectorAll('a').forEach((dot) => dot.classList.remove('active'));
-    navDots.querySelectorAll('a')[index].classList.add('active');
+      // Adiciona o botão próximo ao vídeo ou em um local visível
+      video.parentNode.insertBefore(playButton, video.nextSibling);
+    });
   }
-
-  updateNavDots();
-  window.addEventListener('scroll', updateNavDots);
 });
-</script>*/
