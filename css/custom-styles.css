@@ -181,4 +181,99 @@ Lembra de adicionar esse campo no media queries para o texto dentro do carrousel
     0,
     0.2
   ); /* Camada escura para melhorar a legibilidade do texto sobre a imagem de fundo */
+<<<<<<< HEAD
 }
+=======
+} }
+
+
+/*==================== estilização perfil e quem somos====================*/
+
+.quemSomos {
+  
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 5px solid var(--color-text);
+            border-bottom: 5px solid var(--color-text);
+}
+
+.quemSomos h2 {
+   font-size: 36px;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 20px;
+}
+
+.quemSomos p {
+  font-size: 18px;
+            line-height: 1.6;
+            color: var(--color-text);
+            max-width: 800px;
+            margin: 0 auto;
+}
+
+.quemSomos .highlight {
+  color: var(--color-text);
+            font-weight: 600;
+}
+
+.perfil {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+   }
+   .perfiltxt {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-family: "Poppins", "Arial", sans-serif; /* Backup font adicionado */
+   }
+   
+   .btSaibaQuem {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-text);
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .btSaibaQuem:hover{
+      background-color: var(--color-primary-light);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+
+     }
+
+     .btSaibaQuem:active{
+      background-color: var(--color-primary);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transform: translateY(0);
+     }
+     
+     .btSaibaQuem:focus{
+      outline: none;
+     }
+>>>>>>> 3f3d45e (finalizando o a secao de quemsomo e perfil)
