@@ -1,0 +1,52 @@
+body {
+    font-family: 'Gabriela', serif;
+}
+
+.servicos {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.card-title {
+    color: #bd8f51;
+    font-size: 1.5rem;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #bd8f51;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #fbf2b6;
+    color: #bd8f51;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px;
+    }
+}

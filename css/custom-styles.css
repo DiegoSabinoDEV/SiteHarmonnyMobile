@@ -9,7 +9,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", "Arial", sans-serif; /* Backup font adicionado */
+  font-family: 'Gabriela', serif;
   color: var(--color-text);
   background-color: var(--color-background);
   background-image: url(../images/backgroundOf.png); /* lembrar de configurar a img do background para telas */
@@ -55,7 +55,7 @@ p {
   margin-top: 1rem;
   text-align: center;
   letter-spacing: 0.1rem;
-  font-family: "Poppins", "Arial", sans-serif; /* Backup font adicionado */
+  font-family: 'Gabriela', serif;
 }
 
 /*--------------MENU CANVAS ------------------------------*/
@@ -111,12 +111,7 @@ p {
   margin-left: 10px;
 }
 
-.video-container video {
-  width: 100%;    /* Faz o vídeo ocupar a largura total da área de visualização */
-  height: auto;   /* Mantém a proporção do vídeo enquanto ajusta a largura */
-  max-width: 640px; /* Limita a largura máxima do vídeo para não ficar muito grande em tablets */
-  margin: auto;  /* Centraliza o vídeo horizontalmente */
-}
+
 
 
 
@@ -140,19 +135,33 @@ p {
   }
 }
 
-.play-video-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  position: absolute;  /* Posiciona sobre o vídeo */
-  top: 50%;            /* Centraliza verticalmente */
-  left: 50%;           /* Centraliza horizontalmente */
-  transform: translate(-50%, -50%); /* Ajuste fino para centralização exata */
-  z-index: 10;         /* Garante que o botão fique sobre o vídeo */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  color: #fbf2b6; /* Primary light color from your palette */
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .video-container {
+      padding-bottom: 150%; /* Adjust ratio for mobile view */
+  }
 }
 
 
@@ -181,10 +190,10 @@ Lembra de adicionar esse campo no media queries para o texto dentro do carrousel
     0,
     0.2
   ); /* Camada escura para melhorar a legibilidade do texto sobre a imagem de fundo */
-<<<<<<< HEAD
+
 }
-=======
-} }
+
+} 
 
 
 /*==================== estilização perfil e quem somos====================*/
@@ -240,7 +249,7 @@ Lembra de adicionar esse campo no media queries para o texto dentro do carrousel
     margin-top: 1rem;
     text-align: center;
     letter-spacing: 0.1rem;
-    font-family: "Poppins", "Arial", sans-serif; /* Backup font adicionado */
+    font-family: 'Gabriela', serif;
    }
    
    .btSaibaQuem {
@@ -276,4 +285,69 @@ Lembra de adicionar esse campo no media queries para o texto dentro do carrousel
      .btSaibaQuem:focus{
       outline: none;
      }
->>>>>>> 3f3d45e (finalizando o a secao de quemsomo e perfil)
+
+     /* Estilização fotos dos serviços */
+
+
+.imgServ {
+  
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  
+}
+h4 {
+  margin: 0;
+  padding-top: 20px; /* Espaço adicional para legibilidade */ 
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+.servicos {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.card-body {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.card-title {
+  color: #bd8f51;
+  font-size: 1.5rem;
+}
+
+.card-text {
+  color: #6c757d;
+}
+
+.btn-primary {
+  background-color: #bd8f51;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #fbf2b6;
+  color: #bd8f51;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+      height: 150px;
+  }
+}
